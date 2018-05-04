@@ -1,0 +1,3 @@
+.bundle/
+sensu-plugins-azure-burstable-metrics-*.gem
+vendor/

@@ -1,0 +1,23 @@
+[
+	{
+		"id": "A0",
+		"name": "poc-a0",
+		"hardwareProfile": {
+			"vmSize": "Standard_A0"
+		}
+	},
+	{
+		"id": "B1s",
+		"name": "poc-bs-test",
+		"hardwareProfile": {
+			"vmSize": "Standard_B1s"
+		}
+	},
+	{
+		"id": "G6",
+		"name": "like-a-g6",
+		"hardwareProfile": {
+			"vmSize": "Standard_G6"
+		}
+	}
+]
