@@ -5,6 +5,12 @@ require 'sensu-plugin/metric/cli'
 require 'time'
 
 class BurstableMetrics < Sensu::Plugin::Metric::CLI::Graphite
+  option :schema,
+         description: 'Metric naming scheme, text to prepend to metric',
+         short: '-s SCHEME',
+         long: '--scheme SCHEME',
+         default: 'sensu'
+
   option :spn_id,
          description: 'The SPN ID with read access to the subscription',
          short: '-i',
@@ -68,6 +74,6 @@ private
   end
 
   def process_metric(machine_name, metric, index, time)
-    output [machine_name, @metrics_client.graphite_burstable_metrics_list[index]].join('.'), metric['timeseries'][0]['data'][0]['average'], time.to_i
+    output [config[:schema], machine_name, @metrics_client.graphite_burstable_metrics_list[index]].join('.'), metric['timeseries'][0]['data'][0]['average'], time.to_i
   end
 end
