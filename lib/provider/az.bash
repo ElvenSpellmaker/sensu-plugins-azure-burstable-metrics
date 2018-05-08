@@ -15,6 +15,6 @@ done
 
 . $ENV_DIR/bin/activate &> /dev/null
 
-az login --service-principle -u "$SPN_ID" -p "$SPN_SECRET" --tenant "$TENANT_ID" &> /dev/null
+az login --service-principal -u "$SPN_ID" -p "$SPN_SECRET" --tenant "$TENANT_ID" &> /dev/null
 
 eval az $AZ_COMMAND
