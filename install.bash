@@ -10,7 +10,6 @@ check_error()
 	fi
 }
 
-
 virtualenv $ENV_DIR
 check_error $?
 

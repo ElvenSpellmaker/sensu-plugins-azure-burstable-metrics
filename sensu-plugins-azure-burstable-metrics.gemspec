@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.date                   = Date.today.to_s
   s.description            = 'A hacky Sensu plug-in to provide burstable metrics by calling out to `az`'
   s.executables            = Dir.glob('bin/**/*.{rb}').map { |file| File.basename(file) }
-  s.files                  = Dir.glob('{bin,lib}/**/*') + %w[README.md]
+  s.files                  = Dir.glob('{bin,lib}/**/*') + %w[README.md install.bash]
   s.license                = 'MIT'
   s.homepage               = 'https://github.com/ElvenSpellmaker/sensu-plugins-azure-burstable-metrics'
   s.metadata               = { 'maintainer'         => '@ElvenSpellmaker',
