@@ -1,6 +1,8 @@
 Sensu Plugins Azure Burstable Metrics
 =====================================
 
+[![Gem Version](https://badge.fury.io/rb/sensu-plugins-azure-burstable-metrics.svg)](https://badge.fury.io/rb/sensu-plugins-azure-burstable-metrics)
+
 This is a hacky Sensu plug-in to call out to the `az` to list all vms in a
 subscription and then gather metrics about burstable credits and output them in
 a Graphite way.
