@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$TRAVIS" = true ]; then
+	echo "This is Travis, don't pre-install \`az\`... Exiting 0..."
+	exit 0
+fi
+
 ENV_DIR="/az-python"
 
 check_error()
