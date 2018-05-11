@@ -19,5 +19,12 @@
 		"hardwareProfile": {
 			"vmSize": "Standard_G6"
 		}
+	},
+	{
+		"id": "B2ms",
+		"name": "poc-bms-test",
+		"hardwareProfile": {
+			"vmSize": "Standard_B2ms"
+		}
 	}
 ]

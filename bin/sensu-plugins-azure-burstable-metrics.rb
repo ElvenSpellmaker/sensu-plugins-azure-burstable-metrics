@@ -47,7 +47,7 @@ class BurstableMetrics < Sensu::Plugin::Metric::CLI::Graphite
       config[:tenant_id],
   )
 
-    machines = @metrics_client.vm_list.select! { |machine| machine['hardwareProfile']['vmSize'] =~ /.*B\d{1,2}s$/ }
+    machines = @metrics_client.vm_list.select! { |machine| machine['hardwareProfile']['vmSize'] =~ /.*B\d{1,2}m?s$/ }
 
     time = Time.now.utc
     start_time = (time - 120).strftime(@@time_format)
