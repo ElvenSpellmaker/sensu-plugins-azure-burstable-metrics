@@ -1,6 +1,7 @@
 #! /usr/bin/env ruby
 
 require 'json'
+require 'parallel'
 require 'sensu-plugin/metric/cli'
 require 'time'
 
@@ -53,9 +54,9 @@ class BurstableMetrics < Sensu::Plugin::Metric::CLI::Graphite
     start_time = (time - 120).strftime(@@time_format)
     end_time = (time - 60).strftime(@@time_format)
 
-    machines.each do |machine|
+    Parallel.map(machines, in_threads: 5) { |machine|
       process_machine(machine, time, start_time, end_time)
-    end
+    }
 
     ok
   end
