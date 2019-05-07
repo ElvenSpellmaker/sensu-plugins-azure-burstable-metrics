@@ -27,6 +27,8 @@ Gem::Specification.new do |s|
   s.version                = SensuPluginsAzureBurstableMetrics::Version::VER_STRING
 
   s.add_runtime_dependency 'json',         '2.1.0'
+  s.add_runtime_dependency 'parallel',     '1.12.1'
+  s.add_runtime_dependency 'mixlib-cli',   '1.7.0'
   s.add_runtime_dependency 'sensu-plugin', '~> 1.2'
 
   s.add_development_dependency 'rspec', '~> 3.0'

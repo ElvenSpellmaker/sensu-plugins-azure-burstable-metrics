@@ -8,9 +8,9 @@ RSpec.describe 'BurstableMetrics' do
         'sensu.poc-bs-test.cpu_credits_remaining 636.0',
         'sensu.poc-bms-test.cpu_credits_consumed 0.0',
         'sensu.poc-bms-test.cpu_credits_remaining 636.0',
-      ]
+      ].sort!
 
-      metrics.each_line.with_index do |line, index|
+      metrics.split("\n").sort!.each_with_index do |line, index|
         expect(line).to start_with(expected[index])
       end
     end
